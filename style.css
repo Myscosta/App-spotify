@@ -1,0 +1,25 @@
+
+.body{
+    height: 100%;
+    margin: 0;
+ 
+}
+
+.formulario{
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    height: 100%;
+    width: 400px; 
+    padding: 20px;
+    border: 3px solid #81aa4a;
+    border-radius: 10px;
+
+}
+
+/* .titulo{
+   text-align: center;
+   padding: 50px;
+   margin-top: 50px;
+
+} */
