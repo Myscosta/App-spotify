@@ -10,12 +10,13 @@
     justify-content: center;
     align-items: center; 
     height: 100%;
-    width: 400px; 
+    width: 600px; 
     padding: 20px;
     border: 3px solid #81aa4a;
     border-radius: 10px;
 
 }
+
 
 /* .titulo{
    text-align: center;
