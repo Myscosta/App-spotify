@@ -1,6 +1,7 @@
 <?php
 $titulo_da_pagina = "Listagem de Discografias";
 include "inc-cabecalho.php";
+
 ?>
 <body>
     <main class="container ">
@@ -8,13 +9,15 @@ include "inc-cabecalho.php";
         <h1>Listagem de Discografia</h1>
         <div class="row">
             <div class="col">
-                <a href="discografia-formulario.php">Nova Discografia</a>
+                <a href="discografia-formulario.php" class="btn btn-primary me-2">Nova Discografia</a>
             </div>
+            
         </div>
-
+        <br>
         <div class="row">
             <div class="col">
-                <table class= "table">
+                <table class= "table table-striped table-bordered border-warning">
+                    <thead class= "table-success">
                     <tr>
                         <td>ID</td>
                         <td>Nome</td>
@@ -23,7 +26,7 @@ include "inc-cabecalho.php";
                         <td>Tipo</td>
                         <td>Foto</td>
                     </tr>
-                
+                    </thead>    
             <?php
             #abrir conexao
             include "inc-conexao.php";
@@ -37,7 +40,7 @@ include "inc-cabecalho.php";
                 echo "<tr>";
 
                 echo "<td> {$linha_resultado['Id']} </td>";
-                echo "<td> {$linha_resultado['Nome']} </td>";
+                echo "<td> <a href='discografia-visualizar.php?id={$linha_resultado['Id']}'>{$linha_resultado['Nome']} </a> </td>";
                 echo "<td> {$linha_resultado['Ano']} </td>";
                 echo "<td> {$linha_resultado['Artista']} </td>";
                 echo "<td> {$linha_resultado['Tipo']} </td>";
