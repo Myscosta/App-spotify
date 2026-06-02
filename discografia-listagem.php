@@ -25,7 +25,8 @@ include "inc-cabecalho.php";
                         <td>Artista</td>
                         <td>Tipo</td>
                         <td>Foto</td>
-                    </tr>
+                        <td>Ações</td>
+                        
                     </thead>    
             <?php
             #abrir conexao
@@ -45,6 +46,18 @@ include "inc-cabecalho.php";
                 echo "<td> {$linha_resultado['Artista']} </td>";
                 echo "<td> {$linha_resultado['Tipo']} </td>";
                 echo "<td> {$linha_resultado['Foto']} </td>";
+
+                echo "<td> 
+                <a href='discografia-excluir.php?id={$linha_resultado['Id']}'>
+                <i class='bi bi-trash'></i>
+                </a> 
+
+                <a href= 'discografia-editar.php?id={$linha_resultado['Id']}'>
+                <i class='bi bi-pencil-square'></i>
+                </a>
+
+                </td>";
+
 
                 echo "</tr>";
             }
